@@ -1,0 +1,210 @@
+{
+  "recipes": [
+    {
+      "id": "mesh-hot",
+      "name": "Mesh 간단 레시피",
+      "type": "hot",
+      "metadata": {
+        "coffee": {
+          "amount": "14g",
+          "grindSize": "중간",
+          "grindClicks": null
+        },
+        "water": {
+          "temperature": "93°C",
+          "totalAmount": "230g"
+        },
+        "equipment": {
+          "dripper": "하리오 V60",
+          "filter": "V60 백색 필터"
+        },
+        "time": {
+          "target": "1:40 ~ 1:50",
+          "targetMin": 100,
+          "targetMax": 110
+        },
+        "source": {
+          "url": "",
+          "label": "Mesh 간단 레시피"
+        }
+      },
+      "steps": [
+        {
+          "id": 1,
+          "time": 0,
+          "action": "뜸 들이기",
+          "water": 30,
+          "cumulative": 30,
+          "note": "커피 전체가 젖도록 중심부터 천천히"
+        },
+        {
+          "id": 2,
+          "time": 30,
+          "action": "1차 푸어",
+          "water": 100,
+          "cumulative": 130,
+          "alertBefore": 5,
+          "note": "가운데서부터 바깥으로 나선을 그려가며 골고루"
+        },
+        {
+          "id": 3,
+          "time": 60,
+          "action": "2차 푸어",
+          "water": 100,
+          "cumulative": 230,
+          "alertBefore": 5,
+          "note": "가운데서부터 바깥으로 나선을 그려가며 골고루"
+        },
+        {
+          "id": 4,
+          "time": 105,
+          "action": "추출 종료",
+          "water": 0,
+          "cumulative": 230,
+          "note": "1분 45초를 기준으로 분쇄도 조정"
+        }
+      ],
+      "createdAt": "2025-02-03T10:00:00Z",
+      "updatedAt": "2025-02-03T10:00:00Z"
+    },
+    {
+      "id": "produces-something-good",
+      "name": "프로듀스썸띵굿 브루잉 레시피",
+      "type": "hot",
+      "metadata": {
+        "coffee": {
+          "amount": "16g",
+          "grindSize": "중간",
+          "grindClicks": 75
+        },
+        "water": {
+          "temperature": "93°C",
+          "totalAmount": "250g"
+        },
+        "equipment": {
+          "dripper": "하리오 V60",
+          "filter": ""
+        },
+        "time": {
+          "target": "2:10 ~ 2:30",
+          "targetMin": 130,
+          "targetMax": 150
+        },
+        "source": {
+          "url": "https://smartstore.naver.com/producesomethinggood/products/10481793871",
+          "label": ""
+        }
+      },
+      "steps": [
+        {
+          "id": 1,
+          "time": 0,
+          "action": "뜸",
+          "water": 40,
+          "cumulative": 40,
+          "note": ""
+        },
+        {
+          "id": 2,
+          "time": 30,
+          "action": "1차 푸어",
+          "water": 80,
+          "cumulative": 120,
+          "note": "물줄기 빠르게 푸어오버",
+          "alertBefore": 5
+        },
+        {
+          "id": 3,
+          "time": 65,
+          "action": "2차 푸어",
+          "water": 70,
+          "cumulative": 190,
+          "note": "물줄기 중간 굵기로, 빠르게",
+          "alertBefore": 5
+        },
+        {
+          "id": 4,
+          "time": 90,
+          "action": "3차 푸어",
+          "water": 60,
+          "cumulative": 250,
+          "note": "천천히 푸어, 골고루 섞어준다는 느낌으로 마무리",
+          "alertBefore": 5
+        },
+        {
+          "id": 5,
+          "time": 130,
+          "action": "완료",
+          "water": 0,
+          "cumulative": 250,
+          "note": ""
+        }
+      ],
+      "createdAt": "2025-02-03T10:00:00Z",
+      "updatedAt": "2026-02-03T00:00:00Z"
+    },
+    {
+      "id": "kenya-single-origin",
+      "name": "(테스트) 케냐 싱글 오리진",
+      "type": "hot",
+      "metadata": {
+        "coffee": {
+          "amount": "18g",
+          "grindSize": "중간",
+          "grindClicks": null
+        },
+        "water": {
+          "temperature": "94°C",
+          "totalAmount": "250g"
+        },
+        "equipment": {
+          "dripper": "하리오 V60 02",
+          "filter": "V60 백색 필터"
+        },
+        "time": {
+          "target": "0:50 ~ 1:00",
+          "targetMin": 50,
+          "targetMax": 60
+        },
+        "source": {
+          "url": "",
+          "label": ""
+        }
+      },
+      "steps": [
+        {
+          "id": 1,
+          "time": 0,
+          "action": "뜸 들이기",
+          "water": 30,
+          "cumulative": 30,
+          "note": "원두 전체가 젖도록 균등하게 적润",
+          "duration": 10,
+          "alertBefore": 0
+        },
+        {
+          "id": 2,
+          "time": 30,
+          "action": "1차 푸어",
+          "water": 80,
+          "cumulative": 110,
+          "note": "천천히 원형으로 푸어오버",
+          "duration": 5,
+          "alertBefore": 5
+        },
+        {
+          "id": 3,
+          "time": 50,
+          "action": "추출 종료",
+          "water": 0,
+          "cumulative": 250,
+          "note": "1분 00초를 기준으로 분쇄도 조정",
+          "duration": 0,
+          "alertBefore": 0
+        }
+      ],
+      "createdAt": "2025-02-03T10:00:00Z",
+      "updatedAt": "2025-02-03T10:00:00Z"
+    }
+  ]
+}
