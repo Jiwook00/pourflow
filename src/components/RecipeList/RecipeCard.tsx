@@ -9,10 +9,10 @@ export default function RecipeCard({ recipe, onClick }: Props) {
   return (
     <button
       onClick={onClick}
-      className="w-full text-left bg-white rounded-xl shadow-sm border border-gray-100 p-4 active:bg-gray-50 transition-colors"
+      className="w-full text-left bg-white rounded-xl shadow-sm border border-warm-200 p-4 active:bg-warm-100 transition-colors"
     >
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold text-gray-900">
+        <h3 className="text-lg font-semibold text-warm-900">
           {recipe.type === 'iced' ? '🧊' : '☕'} {recipe.name}
         </h3>
         <span
@@ -26,13 +26,13 @@ export default function RecipeCard({ recipe, onClick }: Props) {
         </span>
       </div>
 
-      <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-500">
+      <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-warm-500">
         <span>🌡️ {recipe.metadata.water.temperature}</span>
         <span>🫘 {recipe.metadata.coffee.amount}</span>
         <span>⏱️ {recipe.metadata.time.target}</span>
       </div>
 
-      <p className="mt-1 text-xs text-gray-400">🔹 {recipe.metadata.equipment.dripper}</p>
+      <p className="mt-1 text-xs text-warm-400">🔹 {recipe.metadata.equipment.dripper}</p>
     </button>
   );
 }

@@ -9,14 +9,14 @@ export default function Controls({ isRunning, onToggle, onReset }: Props) {
     <div className="flex gap-3">
       <button
         onClick={onToggle}
-        className="flex-1 bg-white border border-gray-200 text-gray-700 py-3.5 rounded-xl font-semibold active:bg-gray-100 transition-colors text-sm"
+        className="flex-1 bg-white border border-warm-200 text-warm-700 py-3.5 rounded-xl font-semibold active:bg-warm-100 transition-colors text-sm"
       >
         {isRunning ? '⏸️ 일시정지' : '▶️ 재개'}
       </button>
 
       <button
         onClick={onReset}
-        className="flex-1 bg-white border border-gray-200 text-gray-700 py-3.5 rounded-xl font-semibold active:bg-gray-100 transition-colors text-sm"
+        className="flex-1 bg-white border border-warm-200 text-warm-700 py-3.5 rounded-xl font-semibold active:bg-warm-100 transition-colors text-sm"
       >
         🔄 리셋
       </button>

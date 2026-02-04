@@ -12,7 +12,7 @@ export default function Completion() {
   if (loading || !recipe) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <p className="text-gray-400">로딩...</p>
+        <p className="text-warm-400">로딩...</p>
       </div>
     );
   }
@@ -25,23 +25,23 @@ export default function Completion() {
     <div className="min-h-screen flex flex-col items-center justify-center p-6">
       <div className="w-full text-center space-y-6">
         <div className="text-7xl">✅</div>
-        <h1 className="text-2xl font-bold text-gray-900">브루잉 완료!</h1>
+        <h1 className="text-2xl font-bold text-warm-900">브루잉 완료!</h1>
 
         <div>
-          <p className="text-gray-400 text-sm">총 소요 시간</p>
-          <p className="text-6xl font-bold font-mono text-gray-900 mt-1">
+          <p className="text-warm-400 text-sm">총 소요 시간</p>
+          <p className="text-6xl font-bold font-timer text-warm-900 mt-1">
             {formatTime(actualTime)}
           </p>
         </div>
 
-        <hr className="border-gray-200" />
+        <hr className="border-warm-200" />
 
-        <div className="bg-gray-50 rounded-2xl p-4 text-left">
-          <p className="font-semibold text-gray-900">
+        <div className="bg-warm-100 rounded-2xl p-4 text-left">
+          <p className="font-semibold text-warm-900">
             {recipe.type === 'iced' ? '🧊' : '☕'} {recipe.name}
           </p>
           <div className="mt-2 space-y-1">
-            <p className="text-sm text-gray-400">목표: {recipe.metadata.time.target}</p>
+            <p className="text-sm text-warm-400">목표: {recipe.metadata.time.target}</p>
             <p
               className={`text-sm font-semibold ${
                 isWithinTarget
@@ -59,13 +59,13 @@ export default function Completion() {
         <div className="flex flex-col gap-3 mt-2">
           <button
             onClick={() => navigate('/')}
-            className="w-full bg-white border border-gray-200 text-gray-700 py-4 rounded-2xl font-semibold active:bg-gray-100 transition-colors"
+            className="w-full bg-white border border-warm-200 text-warm-700 py-4 rounded-2xl font-semibold active:bg-warm-100 transition-colors"
           >
             🏠 처음으로
           </button>
           <button
             onClick={() => navigate(`/recipe/${id}/prep`)}
-            className="w-full bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 text-white py-4 rounded-2xl font-semibold transition-colors"
+            className="w-full bg-brew-500 hover:bg-brew-600 active:bg-brew-700 text-white py-4 rounded-2xl font-semibold transition-colors"
           >
             🔄 다시 시작
           </button>

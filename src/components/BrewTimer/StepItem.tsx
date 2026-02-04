@@ -14,12 +14,12 @@ export default function StepItem({ step, status, elapsedTime }: Props) {
 
   if (status === 'completed') {
     return (
-      <div className="flex items-start gap-2.5 bg-gray-50 rounded-xl px-3 py-2.5 border border-gray-100">
+      <div className="flex items-start gap-2.5 bg-warm-100 rounded-xl px-3 py-2.5 border border-warm-200">
         <span className="text-base mt-0.5">✅</span>
         <div>
-          <p className="text-gray-400 text-sm font-medium">{step.action}</p>
+          <p className="text-warm-400 text-sm font-medium">{step.action}</p>
           {step.water > 0 && (
-            <p className="text-xs text-gray-300">
+            <p className="text-xs text-warm-300">
               {step.water}g (누적 {step.cumulative}g)
             </p>
           )}
@@ -65,22 +65,22 @@ export default function StepItem({ step, status, elapsedTime }: Props) {
   if (status === 'upcoming') {
     const secondsUntil = Math.ceil(step.time - elapsedTime);
     return (
-      <div className="bg-amber-400 rounded-xl px-4 py-3 border border-amber-400 animate-pulse">
+      <div className="bg-orange-400 rounded-xl px-4 py-3 border border-orange-400 animate-pulse-soft">
         <div className="flex items-center gap-2">
           <span className="text-lg">⏰</span>
           <p className="text-white font-bold text-sm">준비: {step.action}</p>
         </div>
 
-        <p className="text-amber-100 text-xs font-semibold mt-1">🔔 {secondsUntil}초 후!</p>
+        <p className="text-orange-100 text-xs font-semibold mt-1">🔔 {secondsUntil}초 후!</p>
 
         <div className="mt-1.5">
           {step.water > 0 && (
-            <p className="text-amber-100 text-sm">
+            <p className="text-orange-100 text-sm">
               {step.water}g (누적 {step.cumulative}g)
             </p>
           )}
           {step.note && (
-            <p className="text-amber-200 text-xs mt-0.5 italic">"{step.note}"</p>
+            <p className="text-orange-200 text-xs mt-0.5 italic">"{step.note}"</p>
           )}
         </div>
       </div>
@@ -89,11 +89,11 @@ export default function StepItem({ step, status, elapsedTime }: Props) {
 
   // pending
   return (
-    <div className="flex items-start gap-2.5 bg-gray-50 rounded-xl px-3 py-2.5 border border-gray-100 opacity-60">
+    <div className="flex items-start gap-2.5 bg-warm-100 rounded-xl px-3 py-2.5 border border-warm-200 opacity-60">
       <span className="text-base mt-0.5">⚪</span>
       <div>
-        <p className="text-gray-600 text-sm font-medium">{step.action}</p>
-        <p className="text-xs text-gray-400">
+        <p className="text-warm-600 text-sm font-medium">{step.action}</p>
+        <p className="text-xs text-warm-400">
           {formatTime(step.time)}에 ·{' '}
           {step.water > 0 ? `${step.water}g (누적 ${step.cumulative}g)` : `누적 ${step.cumulative}g`}
         </p>

@@ -8,7 +8,7 @@ import Completion from './components/Completion/Completion';
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-warm-50">
         <div className="max-w-md mx-auto">
           <Routes>
             <Route path="/" element={<RecipeList />} />

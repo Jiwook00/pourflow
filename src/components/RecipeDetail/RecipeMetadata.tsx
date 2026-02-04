@@ -4,11 +4,22 @@ interface Props {
   recipe: Recipe;
 }
 
-function MetaRow({ label, value }: { label: string; value: string }) {
+interface MetaBoxProps {
+  icon: string;
+  label: string;
+  value: string;
+  subValue?: string;
+}
+
+function MetaBox({ icon, label, value, subValue }: MetaBoxProps) {
   return (
-    <div>
-      <p className="text-xs text-gray-400 font-medium">{label}</p>
-      <p className="text-gray-900 text-sm">{value}</p>
+    <div className="bg-warm-50 rounded-xl p-4 shadow-card">
+      <div className="flex items-center gap-2 text-warm-400 text-xs mb-1">
+        <span>{icon}</span>
+        <span>{label}</span>
+      </div>
+      <p className="text-warm-900 font-semibold">{value}</p>
+      {subValue && <p className="text-warm-500 text-xs mt-0.5">{subValue}</p>}
     </div>
   );
 }
@@ -24,32 +35,42 @@ export default function RecipeMetadata({ recipe }: Props) {
         {recipe.type === 'iced' ? '🧊 ICED' : '☕ HOT'}
       </span>
 
-      <div className="space-y-3 pt-1">
-        <MetaRow
-          label="🫘 원두"
-          value={`${recipe.metadata.coffee.amount} (${recipe.metadata.coffee.grindSize} 분쇄)`}
+      <div className="grid grid-cols-2 gap-3">
+        <MetaBox
+          icon="🫘"
+          label="원두"
+          value={recipe.metadata.coffee.amount}
+          subValue={recipe.metadata.coffee.grindSize}
         />
-        <MetaRow
-          label="💧 물"
-          value={`${recipe.metadata.water.temperature}, 총 ${recipe.metadata.water.totalAmount}`}
+        <MetaBox
+          icon="💧"
+          label="물"
+          value={recipe.metadata.water.temperature}
+          subValue={`총 ${recipe.metadata.water.totalAmount}`}
         />
-        <MetaRow label="🔹 드리퍼" value={recipe.metadata.equipment.dripper} />
-        <MetaRow label="⏱️ 예상 시간" value={recipe.metadata.time.target} />
-
-        {recipe.metadata.source?.url && (
-          <div>
-            <p className="text-xs text-gray-400 font-medium">📎 출처</p>
-            <a
-              href={recipe.metadata.source.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-500 text-sm hover:underline"
-            >
-              {recipe.metadata.source.label} →
-            </a>
-          </div>
-        )}
+        <MetaBox
+          icon="◆"
+          label="드리퍼"
+          value={recipe.metadata.equipment.dripper}
+        />
+        <MetaBox
+          icon="⏱"
+          label="예상 시간"
+          value={recipe.metadata.time.target}
+        />
       </div>
+
+      {recipe.metadata.source?.url && (
+        <a
+          href={recipe.metadata.source.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-brew-500 text-sm hover:underline"
+        >
+          <span>↗</span>
+          <span>{recipe.metadata.source.label}</span>
+        </a>
+      )}
     </div>
   );
 }

@@ -108,7 +108,7 @@ export default function BrewTimer() {
   if (loading || !recipe) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <p className="text-gray-400">로딩...</p>
+        <p className="text-warm-400">로딩...</p>
       </div>
     );
   }
@@ -132,7 +132,7 @@ export default function BrewTimer() {
       </div>
 
       {/* Fixed bottom controls */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-100">
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-warm-200">
         <div className="max-w-md mx-auto">
           <Controls isRunning={isRunning} onToggle={handleToggle} onReset={handleReset} />
         </div>
