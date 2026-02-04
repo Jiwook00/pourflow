@@ -53,7 +53,7 @@ export default function PrepCountdown() {
           <p className="text-warm-700 text-base mt-1.5">{firstStep.water}g 부어주세요</p>
         )}
         {firstStep.note && (
-          <p className="text-warm-500 text-sm mt-2 italic">"{firstStep.note}"</p>
+          <p className="text-warm-600 text-base mt-2">"{firstStep.note}"</p>
         )}
       </div>
 
@@ -69,7 +69,7 @@ export default function PrepCountdown() {
             {secondStep.cumulative}g)
           </p>
           {secondStep.note && (
-            <p className="text-warm-400 text-xs mt-1 italic">"{secondStep.note}"</p>
+            <p className="text-warm-500 text-sm mt-1">"{secondStep.note}"</p>
           )}
         </div>
       )}

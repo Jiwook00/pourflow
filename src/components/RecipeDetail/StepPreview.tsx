@@ -33,7 +33,7 @@ export default function StepPreview({ steps }: Props) {
                   : `누적 ${step.cumulative}g`}
               </p>
               {step.note && (
-                <p className="text-xs text-warm-400 mt-1 italic">{step.note}</p>
+                <p className="text-sm text-warm-500 mt-1">"{step.note}"</p>
               )}
             </div>
           </div>
