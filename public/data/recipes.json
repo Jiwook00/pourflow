@@ -217,71 +217,8 @@
       "updatedAt": "2026-02-03T00:00:00Z"
     },
     {
-      "id": "kenya-single-origin",
-      "name": "(테스트) 케냐 싱글 오리진",
-      "type": "hot",
-      "metadata": {
-        "coffee": {
-          "amount": "18g",
-          "grindSize": "중간",
-          "grindClicks": null
-        },
-        "water": {
-          "temperature": "94°C",
-          "totalAmount": "250g"
-        },
-        "equipment": {
-          "dripper": "하리오 V60 02",
-          "filter": "V60 백색 필터"
-        },
-        "time": {
-          "target": "0:50 ~ 1:00",
-          "targetMin": 50,
-          "targetMax": 60
-        },
-        "source": {
-          "url": "",
-          "label": ""
-        }
-      },
-      "steps": [
-        {
-          "id": 1,
-          "time": 0,
-          "action": "뜸 들이기",
-          "water": 30,
-          "cumulative": 30,
-          "note": "원두 전체가 젖도록 균등하게 적润",
-          "duration": 10,
-          "alertBefore": 0
-        },
-        {
-          "id": 2,
-          "time": 30,
-          "action": "1차 푸어",
-          "water": 80,
-          "cumulative": 110,
-          "note": "천천히 원형으로 푸어오버",
-          "duration": 5,
-          "alertBefore": 5
-        },
-        {
-          "id": 3,
-          "time": 50,
-          "action": "추출 종료",
-          "water": 0,
-          "cumulative": 250,
-          "note": "1분 00초를 기준으로 분쇄도 조정",
-          "duration": 0,
-          "alertBefore": 0
-        }
-      ],
-      "createdAt": "2025-02-03T10:00:00Z",
-      "updatedAt": "2025-02-03T10:00:00Z"
-    },
-    {
       "id": "protocol-kenya-hot",
-      "name": "프로토콜 케냐 원두 핫",
+      "name": "프로토콜",
       "type": "hot",
       "metadata": {
         "coffee": {
@@ -359,7 +296,7 @@
     },
     {
       "id": "protocol-kenya-iced",
-      "name": "프로토콜 케냐 원두 아이스",
+      "name": "프로토콜",
       "type": "iced",
       "metadata": {
         "coffee": {
@@ -434,6 +371,318 @@
       ],
       "createdAt": "2026-02-03T00:00:00Z",
       "updatedAt": "2026-02-03T00:00:00Z"
+    },
+    {
+      "id": "ansta-2-hot",
+      "name": "안스타 2인분 간단 레시피",
+      "type": "hot",
+      "metadata": {
+        "coffee": {
+          "amount": "20g",
+          "grindSize": "1000~1100μm",
+          "grindClicks": null
+        },
+        "water": {
+          "temperature": "92°C",
+          "totalAmount": "300g"
+        },
+        "equipment": {
+          "dripper": "하리오 V60",
+          "filter": ""
+        },
+        "time": {
+          "target": "2:10 ~ 2:40",
+          "targetMin": 130,
+          "targetMax": 160
+        },
+        "source": {
+          "url": "https://youtu.be/uZs78TPm7ws?si=o0ZrN57ikxOLPvpa",
+          "label": "유튜브"
+        }
+      },
+      "steps": [
+        {
+          "id": 1,
+          "time": 0,
+          "action": "1차 푸어",
+          "water": 60,
+          "cumulative": 60,
+          "note": "필터를 물로 꽉 붙게 린싱 후 시작",
+          "alertBefore": 5
+        },
+        {
+          "id": 2,
+          "time": 30,
+          "action": "2차 푸어",
+          "water": 80,
+          "cumulative": 140,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 3,
+          "time": 60,
+          "action": "3차 푸어",
+          "water": 80,
+          "cumulative": 220,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 4,
+          "time": 90,
+          "action": "4차 푸어",
+          "water": 80,
+          "cumulative": 300,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 5,
+          "time": 130,
+          "action": "추출 완료",
+          "water": 0,
+          "cumulative": 300,
+          "note": "2분 10초 ~ 2분 40초 사이 완료 (최대 3분 20초 이내)",
+          "alertBefore": 5
+        }
+      ],
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "ansta-2-iced",
+      "name": "안스타 2인분 간단 레시피",
+      "type": "iced",
+      "metadata": {
+        "coffee": {
+          "amount": "20g",
+          "grindSize": "1000~1100μm",
+          "grindClicks": null
+        },
+        "water": {
+          "temperature": "92°C",
+          "totalAmount": "200g"
+        },
+        "equipment": {
+          "dripper": "하리오 V60",
+          "filter": ""
+        },
+        "time": {
+          "target": "2:10 ~ 2:40",
+          "targetMin": 130,
+          "targetMax": 160
+        },
+        "source": {
+          "url": "https://youtu.be/uZs78TPm7ws?si=o0ZrN57ikxOLPvpa",
+          "label": "유튜브"
+        }
+      },
+      "steps": [
+        {
+          "id": 1,
+          "time": 0,
+          "action": "1차 푸어",
+          "water": 40,
+          "cumulative": 40,
+          "note": "필터를 물로 꽉 붙게 린싱 후 시작 (1:10 비율, 얼음 준비)",
+          "alertBefore": 5
+        },
+        {
+          "id": 2,
+          "time": 30,
+          "action": "2차 푸어",
+          "water": 50,
+          "cumulative": 90,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 3,
+          "time": 60,
+          "action": "3차 푸어",
+          "water": 60,
+          "cumulative": 150,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 4,
+          "time": 90,
+          "action": "4차 푸어",
+          "water": 50,
+          "cumulative": 200,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 5,
+          "time": 130,
+          "action": "추출 완료",
+          "water": 0,
+          "cumulative": 200,
+          "note": "",
+          "alertBefore": 5
+        }
+      ],
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "ansta-4-hot",
+      "name": "안스타 4인분 간단 레시피",
+      "type": "hot",
+      "metadata": {
+        "coffee": {
+          "amount": "40g",
+          "grindSize": "1000~1100μm",
+          "grindClicks": null
+        },
+        "water": {
+          "temperature": "86°C",
+          "totalAmount": "600g"
+        },
+        "equipment": {
+          "dripper": "하리오 V60",
+          "filter": ""
+        },
+        "time": {
+          "target": "2:10 ~ 2:40",
+          "targetMin": 130,
+          "targetMax": 160
+        },
+        "source": {
+          "url": "https://youtu.be/uZs78TPm7ws?si=o0ZrN57ikxOLPvpa",
+          "label": "유튜브"
+        }
+      },
+      "steps": [
+        {
+          "id": 1,
+          "time": 0,
+          "action": "1차 푸어",
+          "water": 120,
+          "cumulative": 120,
+          "note": "필터를 물로 꽉 붙게 린싱 후 시작",
+          "alertBefore": 5
+        },
+        {
+          "id": 2,
+          "time": 30,
+          "action": "2차 푸어",
+          "water": 160,
+          "cumulative": 280,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 3,
+          "time": 60,
+          "action": "3차 푸어",
+          "water": 160,
+          "cumulative": 440,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 4,
+          "time": 90,
+          "action": "4차 푸어",
+          "water": 160,
+          "cumulative": 600,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 5,
+          "time": 130,
+          "action": "추출 완료",
+          "water": 0,
+          "cumulative": 600,
+          "note": "2분 10초 ~ 2분 40초 사이 완료 (최대 3분 20초 이내)",
+          "alertBefore": 5
+        }
+      ],
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "ansta-4-iced",
+      "name": "안스타 4인분 간단 레시피",
+      "type": "iced",
+      "metadata": {
+        "coffee": {
+          "amount": "40g",
+          "grindSize": "1000~1100μm",
+          "grindClicks": null
+        },
+        "water": {
+          "temperature": "86°C",
+          "totalAmount": "400g"
+        },
+        "equipment": {
+          "dripper": "하리오 V60",
+          "filter": ""
+        },
+        "time": {
+          "target": "2:10 ~ 2:40",
+          "targetMin": 130,
+          "targetMax": 160
+        },
+        "source": {
+          "url": "https://youtu.be/uZs78TPm7ws?si=o0ZrN57ikxOLPvpa",
+          "label": "유튜브"
+        }
+      },
+      "steps": [
+        {
+          "id": 1,
+          "time": 0,
+          "action": "1차 푸어",
+          "water": 80,
+          "cumulative": 80,
+          "note": "필터를 물로 꽉 붙게 린싱 후 시작",
+          "alertBefore": 5
+        },
+        {
+          "id": 2,
+          "time": 30,
+          "action": "2차 푸어",
+          "water": 100,
+          "cumulative": 180,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 3,
+          "time": 60,
+          "action": "3차 푸어",
+          "water": 120,
+          "cumulative": 300,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 4,
+          "time": 90,
+          "action": "4차 푸어",
+          "water": 100,
+          "cumulative": 400,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 5,
+          "time": 130,
+          "action": "추출 완료",
+          "water": 0,
+          "cumulative": 400,
+          "note": "2분 10초 ~ 2분 40초 사이 완료 (최대 3분 20초 이내)",
+          "alertBefore": 5
+        }
+      ],
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
     }
   ]
 }
