@@ -125,7 +125,7 @@ export default function BrewTimer() {
   return (
     <div className="pb-24">
       {/* Sticky timer area */}
-      <div className="sticky top-0 z-10 bg-white p-4 pb-2">
+      <div className="sticky top-0 z-10 bg-white p-4 pb-2 shadow-[0_2px_8px_-2px_rgba(26,24,22,0.08)]">
         <TimerDisplay elapsedTime={elapsedTime} nextStep={nextStep} />
         <ProgressBar progress={progress} />
       </div>
