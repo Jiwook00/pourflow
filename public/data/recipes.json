@@ -683,6 +683,162 @@
       ],
       "createdAt": "2026-02-12T00:00:00Z",
       "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "entsinnen-orea-v3mk-hot",
+      "name": "ENTSINNEN 오레아 V3mk 핫",
+      "type": "hot",
+      "metadata": {
+        "coffee": {
+          "amount": "16g",
+          "grindSize": "",
+          "grindClicks": null
+        },
+        "water": {
+          "temperature": "92°C",
+          "totalAmount": "240g"
+        },
+        "equipment": {
+          "dripper": "오레아 V3",
+          "filter": "칼리타 웨이브 185"
+        },
+        "time": {
+          "target": "2:20",
+          "targetMin": 140,
+          "targetMax": 140
+        },
+        "source": {
+          "url": "",
+          "label": ""
+        }
+      },
+      "steps": [
+        {
+          "id": 1,
+          "time": 0,
+          "action": "뜸",
+          "water": 50,
+          "cumulative": 50,
+          "note": "얇은 물줄기로 침지식 드립 지향",
+          "alertBefore": 5
+        },
+        {
+          "id": 2,
+          "time": 40,
+          "action": "1차 추출",
+          "water": 90,
+          "cumulative": 140,
+          "note": "배드에 물이 빠지기 전에 부어주기. 필터 사이드에 붙은 원두를 긁어 내리듯 푸어",
+          "alertBefore": 5
+        },
+        {
+          "id": 3,
+          "time": 80,
+          "action": "2차 추출",
+          "water": 50,
+          "cumulative": 190,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 4,
+          "time": 110,
+          "action": "3차 추출",
+          "water": 50,
+          "cumulative": 240,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 5,
+          "time": 140,
+          "action": "추출 완료",
+          "water": 0,
+          "cumulative": 240,
+          "note": "",
+          "alertBefore": 5
+        }
+      ],
+      "createdAt": "2026-02-16T00:00:00Z",
+      "updatedAt": "2026-02-16T00:00:00Z"
+    },
+    {
+      "id": "entsinnen-orea-v3mk-iced",
+      "name": "ENTSINNEN 오레아 V3mk 아이스",
+      "type": "iced",
+      "metadata": {
+        "coffee": {
+          "amount": "16g",
+          "grindSize": "",
+          "grindClicks": null
+        },
+        "water": {
+          "temperature": "94°C",
+          "totalAmount": "170g"
+        },
+        "equipment": {
+          "dripper": "오레아 V3",
+          "filter": "칼리타 웨이브 185"
+        },
+        "time": {
+          "target": "2:20",
+          "targetMin": 140,
+          "targetMax": 140
+        },
+        "source": {
+          "url": "",
+          "label": ""
+        }
+      },
+      "steps": [
+        {
+          "id": 1,
+          "time": 0,
+          "action": "뜸",
+          "water": 40,
+          "cumulative": 40,
+          "note": "서버에 얼음 55~60g 미리 담고 시작. 얇은 물줄기로 침지식 드립 지향",
+          "alertBefore": 5
+        },
+        {
+          "id": 2,
+          "time": 40,
+          "action": "1차 추출",
+          "water": 60,
+          "cumulative": 100,
+          "note": "배드에 물이 빠지기 전에 부어주기. 필터 사이드에 붙은 원두를 긁어 내리듯 푸어",
+          "alertBefore": 5
+        },
+        {
+          "id": 3,
+          "time": 80,
+          "action": "2차 추출",
+          "water": 40,
+          "cumulative": 140,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 4,
+          "time": 110,
+          "action": "3차 추출",
+          "water": 30,
+          "cumulative": 170,
+          "note": "",
+          "alertBefore": 5
+        },
+        {
+          "id": 5,
+          "time": 140,
+          "action": "추출 완료",
+          "water": 0,
+          "cumulative": 170,
+          "note": "",
+          "alertBefore": 5
+        }
+      ],
+      "createdAt": "2026-02-16T00:00:00Z",
+      "updatedAt": "2026-02-16T00:00:00Z"
     }
   ]
 }
