@@ -6,9 +6,10 @@ interface Props {
   step: RecipeStep;
   status: StepStatus;
   elapsedTime: number;
+  isNextPreview?: boolean;
 }
 
-export default function StepItem({ step, status, elapsedTime }: Props) {
+export default function StepItem({ step, status, elapsedTime, isNextPreview }: Props) {
   const stepDuration = step.duration ?? 0;
   const stepProgress = calculateStepProgress(elapsedTime, step.time, stepDuration);
 
@@ -96,6 +97,37 @@ export default function StepItem({ step, status, elapsedTime }: Props) {
           )}
           {step.note && (
             <p className="text-warm-500 text-sm mt-1">"{step.note}"</p>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // next preview — pending but immediately after active step
+  if (isNextPreview) {
+    return (
+      <div className="bg-warm-50 rounded-xl px-4 py-3 border border-warm-300">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-full bg-warm-200 flex items-center justify-center flex-shrink-0">
+              <span className="text-warm-400 text-xs">⏱</span>
+            </div>
+            <p className="text-warm-600 text-sm font-medium">
+              다음: {step.action}
+            </p>
+          </div>
+          <span className="text-warm-400 text-sm font-timer">{formatTime(step.time)}</span>
+        </div>
+
+        <div className="mt-2 ml-9">
+          {step.water > 0 && (
+            <p className="text-warm-600">
+              <span className="text-xl font-bold font-timer">{step.water}g</span>
+              <span className="text-warm-400 text-sm ml-2">(누적 {step.cumulative}g)</span>
+            </p>
+          )}
+          {step.note && (
+            <p className="text-warm-400 text-sm mt-1">"{step.note}"</p>
           )}
         </div>
       </div>

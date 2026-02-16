@@ -8,16 +8,29 @@ interface Props {
 }
 
 export default function StepList({ steps, elapsedTime }: Props) {
+  const activeIndex = steps.findIndex(
+    (step) => getStepStatus(step, elapsedTime) === 'active',
+  );
+
   return (
     <div className="flex flex-col gap-2">
-      {steps.map((step) => (
-        <StepItem
-          key={step.id}
-          step={step}
-          status={getStepStatus(step, elapsedTime)}
-          elapsedTime={elapsedTime}
-        />
-      ))}
+      {steps.map((step, index) => {
+        const status = getStepStatus(step, elapsedTime);
+        const isNextPreview =
+          activeIndex >= 0 &&
+          index === activeIndex + 1 &&
+          status === 'pending';
+
+        return (
+          <StepItem
+            key={step.id}
+            step={step}
+            status={status}
+            elapsedTime={elapsedTime}
+            isNextPreview={isNextPreview}
+          />
+        );
+      })}
     </div>
   );
 }
