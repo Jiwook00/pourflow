@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import type { RecipeStep } from '../../types/recipe';
 import { getStepStatus } from '../../hooks/useStepStatus';
 import StepItem from './StepItem';
@@ -12,6 +13,23 @@ export default function StepList({ steps, elapsedTime }: Props) {
     (step) => getStepStatus(step, elapsedTime) === 'active',
   );
 
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const prevActiveIndexRef = useRef<number>(-1);
+
+  useEffect(() => {
+    if (
+      activeIndex >= 0 &&
+      activeIndex !== prevActiveIndexRef.current &&
+      stepRefs.current[activeIndex]
+    ) {
+      stepRefs.current[activeIndex]!.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+    prevActiveIndexRef.current = activeIndex;
+  }, [activeIndex]);
+
   return (
     <div className="flex flex-col gap-2">
       {steps.map((step, index) => {
@@ -22,13 +40,14 @@ export default function StepList({ steps, elapsedTime }: Props) {
           status === 'pending';
 
         return (
-          <StepItem
-            key={step.id}
-            step={step}
-            status={status}
-            elapsedTime={elapsedTime}
-            isNextPreview={isNextPreview}
-          />
+          <div key={step.id} ref={(el) => { stepRefs.current[index] = el; }}>
+            <StepItem
+              step={step}
+              status={status}
+              elapsedTime={elapsedTime}
+              isNextPreview={isNextPreview}
+            />
+          </div>
         );
       })}
     </div>
