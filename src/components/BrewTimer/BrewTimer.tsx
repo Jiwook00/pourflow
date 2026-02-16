@@ -123,11 +123,14 @@ export default function BrewTimer() {
   const progress = calculateOverallProgress(elapsedTime, totalTime);
 
   return (
-    <div className="p-4 pb-24">
-      <TimerDisplay elapsedTime={elapsedTime} nextStep={nextStep} />
-      <ProgressBar progress={progress} />
+    <div className="pb-24">
+      {/* Sticky timer area */}
+      <div className="sticky top-0 z-10 bg-white p-4 pb-2">
+        <TimerDisplay elapsedTime={elapsedTime} nextStep={nextStep} />
+        <ProgressBar progress={progress} />
+      </div>
 
-      <div className="mt-4">
+      <div className="mt-2 px-4">
         <StepList steps={recipe.steps} elapsedTime={elapsedTime} />
       </div>
 
